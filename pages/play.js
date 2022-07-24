@@ -11,7 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Router from "next/router";
 import {signOut} from '../store/User/action'
 
-function play() {
+function Play() {
   const dispatch=useDispatch();
   const shouldCheck = useRef(true);
   const [update, setUpdate] = useState(false);
@@ -105,4 +105,4 @@ function play() {
   );
 }
 
-export default play;
+export default Play;
