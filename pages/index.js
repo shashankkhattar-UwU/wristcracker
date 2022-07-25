@@ -25,7 +25,7 @@ export default function Home() {
         {user && jwt ? (
           <>
             welcome {user} <br />
-            <Link href="/Play">Play</Link> <br />
+            <Link href="/play">Play</Link> <br />
             <span className={styles.buttons} onClick={handleLogout}>Logout</span>
           </>
         ) : (

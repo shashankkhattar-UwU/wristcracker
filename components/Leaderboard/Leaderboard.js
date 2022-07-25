@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
+// import {} from 'dotenv'
 
 function Leaderboard({updateVar}) {
   const playerName=useSelector(state=>state.user.username);
   const [scores, setScores] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const data = await axios.get("http://localhost:3000/api/leaderboard");
+      const data = await axios.get(`/api/leaderboard`);
       data = data.data.scores;
       setScores(data);
     };

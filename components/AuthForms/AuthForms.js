@@ -54,7 +54,7 @@ function AuthForms() {
       }
     }
     try{
-      const response=await axios.post(`http://localhost:3000/api/auth/${reg?"signup":"signin"}`, user);
+      const response=await axios.post(`/api/auth/${reg?"signup":"signin"}`, user);
       if (response.status===200) {
         const player=response.data.player;
         dispatch(signIn({username: player.username, jwt: player.jwt}));

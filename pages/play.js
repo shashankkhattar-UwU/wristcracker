@@ -71,7 +71,7 @@ function Play() {
       time: tempTimetaken.toFixed(3),
     };
     const response = await axios.post(
-      "http://localhost:3000/api/savescore",
+      "/api/savescore",
       result
     );
     if(response.status!==200){
